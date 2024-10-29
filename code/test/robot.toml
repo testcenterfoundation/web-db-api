@@ -1,0 +1,23 @@
+python-path = (".", "./resources" )
+
+default-profiles = "dev"
+
+paths = ["tests"]
+
+[variables]
+BROWSER = "Chromium"
+BASE URL = "https:// robocon. 10"
+HEADLESS = "TRUE"
+
+[profiles.dev]
+Log-level = "TRACE"
+
+[profiles.prod]
+log-level = "NONE"
+
+[profiles.dev.extend-variables]
+BROWSER = "FIREFOX"
+HEADLESS = "FALSE"
+
+[profiles.prod.extend-variables]
+ONLY_PROD = "We're testing on production!"
